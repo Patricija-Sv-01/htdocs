@@ -4,5 +4,8 @@
 // su šiuo amžiumi, prieš tai užrašę „Įvestas amžius:“. Pavyzdžiui: „Įvestas
 // amžius: 15“.
 
+$amzius = 19;
+echo "Įvestas amžius: $amzius";
+
 
 
