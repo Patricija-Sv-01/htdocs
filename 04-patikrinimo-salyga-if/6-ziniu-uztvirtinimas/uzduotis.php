@@ -18,15 +18,35 @@
 //      4. Vieno kepalo pardavimo kaina.
 //      5. Kiek kepykla turi tą dieną iškepti kepalų (užsakymai).
 
+$darboVal = 8;
+$kepaluKiekis = 5;
+$darbuotojuKiekis = 5;
+$savikaina = 4;
+$kaina = 6;
+$uzsakymai = 500;
 
 // Skaičiavimai
 
 // 1. Suskaičiuoti kiek kepykla per vieną darbo dieną spės iškepti duonos
 // kepalų.
+$spesIskpeti = ($kepaluKiekis * $darbuotojuKiekis) * $darboVal;
+
 // 2. Apskaičiuoti visų kepalų savikainą, gautas pajamas pardavus ir iš to gauto
 // pelno dalį.
+$visuSavikaina = $spesIskpeti * $savikaina;
+$pajamos = $spesIskpeti * $kaina;
+$pelnas = $pajamos - $visuSavikaina;
+
 // 3. Patikrinti ar kepykla spės iškepti visus tos dienos užsakymus. Jei ne,
 // suskaičiuoti kiek kepalų nespės iškepti.
+
+if($spesIskpeti >= $uzsakymai){
+    echo "Spes iskepti";
+}
+else{
+    echo ("Nespes iskpeti, truksta: " . ($uzsakymai-$spesIskpeti));
+}
+
 // 4. (Papildomai) Įvertinkite tai, kad pajamas ir pelną galite gauti tik iš
 // parduotų kepalų.
 
