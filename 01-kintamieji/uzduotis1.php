@@ -12,4 +12,5 @@
 //     9. Studijų programos pavadinimas;
 //     10. Atsiskaitytų kreditų skaičius;
 
-
+$vardas = "Patricija";
+$amzius = 19;
